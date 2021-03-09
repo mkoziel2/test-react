@@ -1,0 +1,8 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t test-react/latest .
+
+script:
+  - docker run test-react/latest npm run test
